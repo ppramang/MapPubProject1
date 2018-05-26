@@ -1,0 +1,28 @@
+---
+title: "Developing Analytic Products"
+author: "Panagiotis Pramangioulis"
+date: "26 Mai 2018"
+output:
+  html_document:
+    self_contained: no
+  word_document: default
+---
+
+
+##Assignment 
+
+Create a web page using R Markdown that features a map created with Leaflet. Host your webpage on either GitHub Pages, RPubs, or NeoCities. The webpage should contain the creation date of the document as well as a map created with Leaflet.
+
+#The Map
+
+```{r}
+#load the necessary library
+library(leaflet)
+
+Nuremberg_OldCity_map <- leaflet() %>%
+  addTiles() %>%
+  setView(lng = 11.077597, lat = 49.4510326, zoom = 16) %>%
+  addMarkers(lat=49.4510326,lng=11.077597,popup="Nuremberg Old City, Bavaria, Germany")
+Nuremberg_OldCity_map
+```
+
